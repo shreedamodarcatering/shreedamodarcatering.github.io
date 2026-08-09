@@ -3,176 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Damodar Catering</title>
+    <title>Shree Damodar Catering — Bringing Authentic Flavors to Your Special Occasions</title>
+    <meta name="description" content="Shree Damodar Catering — over 15 years of authentic Indian catering for weddings, corporate events, birthdays, festivals and pujas.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="nav-brand">Shree Damodar Catering</div>
-        <button class="nav-toggle">☰</button>
-        <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="brand">Shree&nbsp;Damodar <span>Catering</span></a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="nav-cta-mobile"><a href="#contact" class="btn btn-primary btn-sm">Book Now</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-primary btn-sm nav-cta">Book Now</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
 
     <main>
+        <!-- ============ HERO ============ -->
         <section id="home" class="hero">
-            <div class="hero-content">
-                <img src="images/background.png" alt="Shree Damodar Catering Logo" class="big-logo">
-                <h1>Welcome to Shree Damodar Catering</h1>
-                <p>Bringing authentic flavors to your special occasions</p>
-                <a href="#contact" class="btn-primary">Book Now</a>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Wedding Catering</h3>
-                    <p>Make your special day memorable with our exquisite wedding menu</p>
-                </div>
-                <div class="service-card">
-                    <h3>Corporate Events</h3>
-                    <p>Professional catering services for your business meetings and events</p>
-                </div>
-                <div class="service-card">
-                    <h3>Private Parties</h3>
-                    <p>Customized menus for birthdays, anniversaries, and celebrations</p>
-                </div>
-                <div class="service-card">
-                    <h3>Festival Catering</h3>
-                    <p>Special menus for religious events and festivals</p>
+            <div class="hero-content container">
+                <img src="images/logo.png" alt="Shree Damodar Catering logo" class="hero-logo">
+                <h1>Bringing authentic flavors to your special occasions</h1>
+                <p>Experience the rich heritage of Indian cuisine with Shree Damodar Catering. We make every event a memorable culinary journey.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Book Your Event <span class="arrow">→</span></a>
+                    <a href="#menu" class="btn btn-ghost">Explore Menu</a>
                 </div>
             </div>
         </section>
 
-        <section id="gallery" class="gallery">
-            <h2>Our Gallery</h2>
-            
-            <!-- Videos Section -->
-            <div class="gallery-section">
-                <h3>Videos</h3>
-                <div class="gallery-grid">
-                    <div class="gallery-item video-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="videos/buffet-display1.webm" type="video/webm">
-                            <!-- https://github.com/shreedamodarcatering/resources/raw/refs/heads/main/buffet-display1.webm -->
-                            <img src="images/gallery/buffet-thumbnail1.jpg" alt="Buffet Display">
-                            Your browser does not support the video tag.
-                        </video>
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="about section">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="images/gallery/food/8.jpg" alt="Authentic curries by Shree Damodar Catering" loading="lazy">
+                    <div class="experience-badge">
+                        <span class="badge-number">15+</span>
+                        <span class="badge-label">Years of<br>Experience</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="eyebrow">About Us</span>
+                    <h2>A Legacy of Taste &amp; Tradition</h2>
+                    <p>With over 15 years of experience, Shree Damodar Catering has been serving delicious authentic cuisine for all occasions. We pride ourselves on using the finest ingredients and maintaining the highest standards of quality and hygiene.</p>
+                    <p>Whether it's an intimate gathering or a grand celebration, our dedicated team ensures that every dish is crafted with passion and served with warmth.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                            </div>
+                            <div>
+                                <h4>Finest Ingredients</h4>
+                                <p>Sourced fresh daily</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+                            </div>
+                            <div>
+                                <h4>Expert Chefs</h4>
+                                <p>Masters of authentic cuisine</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Catering Displays Section -->
-            <div class="gallery-section">
-                <h3>Catering Displays</h3>
-                <div class="gallery-grid" data-category="display" data-count="12"></div>
-            </div>
-
-            <!-- Special Dishes Section -->
-            <div class="gallery-section">
-                <h3>Dishes</h3>
-                <div class="gallery-grid" data-category="food" data-count="32"></div>
-            </div>
-
-            <!-- Event Setups Section -->
-            <!-- <div class="gallery-section">
-                <h3>Event Setups</h3>
-                <div class="gallery-grid" data-category="events" data-count="6"></div>
-            </div> -->
-
-            <!-- Dessert Selection Section -->
-            <!-- <div class="gallery-section">
-                <h3>Dessert Selection</h3>
-                <div class="gallery-grid" data-category="desserts" data-count="8"></div>
-            </div> -->
         </section>
 
-        <section id="menu" class="menu">
-            <h2>Our Specialties</h2>
-            <div class="menu-grid">
-                <div class="menu-category">
-                    <h3>Main Course</h3>
-                    <ul>
-                        <li>Paneer Butter Masala</li>
-                        <li>Dal Makhani</li>
-                        <li>Mixed Vegetable Curry</li>
-                        <li>Jeera Rice</li>
-                    </ul>
+        <!-- ============ SERVICES ============ -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Our Services</span>
+                    <h2>Catering for Every Occasion</h2>
+                    <p>We provide tailored catering solutions to make your events extraordinary, handling everything from menu planning to flawless execution.</p>
                 </div>
-                <div class="menu-category">
-                    <h3>Breads</h3>
-                    <ul>
-                        <li>Butter Naan</li>
-                        <li>Roti</li>
-                        <li>Paratha</li>
-                        <li>Puri</li>
-                    </ul>
-                </div>
-                <div class="menu-category">
-                    <h3>Desserts</h3>
-                    <ul>
-                        <li>Gulab Jamun</li>
-                        <li>Rasgulla</li>
-                        <li>Kheer</li>
-                        <li>Gajar Ka Halwa</li>
-                    </ul>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-media">
+                            <img src="images/gallery/display/4.jpg" alt="Wedding catering setup" loading="lazy">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0 5.4 5.4 0 0 0 0 7.66L12 21l8.42-8.76a5.4 5.4 0 0 0 0-7.66Z"/></svg>
+                            </div>
+                        </div>
+                        <div class="service-body">
+                            <h3>Weddings &amp; Pre-Wedding</h3>
+                            <p>From vibrant Haldi and Mehndi ceremonies to grand traditional weddings, we make your special day memorable.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-media">
+                            <img src="images/gallery/display/10.jpg" alt="Corporate event catering" loading="lazy">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
+                        </div>
+                        <div class="service-body">
+                            <h3>Corporate Events</h3>
+                            <p>Professional catering for business offsites, conferences, and corporate retreats in Goa.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-media">
+                            <img src="images/gallery/display/5.jpg" alt="Birthday celebration catering" loading="lazy">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 2-.5 2.5 0"/><path d="M2 21h20"/><path d="M7 8v3M12 8v3M17 8v3"/><path d="M7 4h.01M12 4h.01M17 4h.01"/></svg>
+                            </div>
+                        </div>
+                        <div class="service-body">
+                            <h3>Birthdays &amp; Milestones</h3>
+                            <p>Customized menus for birthdays, anniversaries, and Namkaran (Naming Ceremonies).</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-media">
+                            <img src="images/gallery/display/3.jpg" alt="Festival and puja catering" loading="lazy">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1.5 2.5 3 4.29 3 6.5a3 3 0 0 1-6 0C9 6.29 10.5 4.5 12 2Z"/><path d="M5 14h14l-1.5 7h-11L5 14Z"/><path d="M9 14v-1.5M15 14v-1.5"/></svg>
+                            </div>
+                        </div>
+                        <div class="service-body">
+                            <h3>Festivals &amp; Pujas</h3>
+                            <p>Authentic feasts for Ganesh Chaturthi, Diwali, Vastu Shanti (House Warming), and other auspicious gatherings.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>With over 15 years of experience, Shree Damodar Catering has been serving delicious authentic cuisine for all occasions. We pride ourselves on using the finest ingredients and maintaining the highest standards of quality and hygiene.</p>
+        <!-- ============ GALLERY ============ -->
+        <section id="gallery" class="gallery section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Our Gallery</span>
+                    <h2>Moments We've Crafted</h2>
+                    <p>A glimpse into the beautiful events and exquisite culinary experiences we've delivered.</p>
+                </div>
+                <div class="gallery-filters" id="gallery-filters">
+                    <button class="filter-pill active" data-filter="all">All</button>
+                    <button class="filter-pill" data-filter="buffet">Buffet Setups</button>
+                    <button class="filter-pill" data-filter="veg">Veg Food</button>
+                    <button class="filter-pill" data-filter="nonveg">Non-Veg Food</button>
+                    <button class="filter-pill" data-filter="videos">Videos</button>
+                    <button class="filter-pill" data-filter="starters">Starters</button>
+                    <button class="filter-pill" data-filter="desserts">Desserts</button>
+                    <button class="filter-pill" data-filter="others">Others</button>
+                </div>
+                <div class="gallery-grid" id="gallery-grid"></div>
+                <div class="gallery-pagination" id="gallery-pagination"></div>
+            </div>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <select required>
-                        <option value="">Select Event Type</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="corporate">Corporate Event</option>
-                        <option value="birthday">Birthday Party</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
+        <!-- ============ MENU / SPECIALTIES ============ -->
+        <section id="menu" class="menu section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Our Specialties</span>
+                    <h2>A Taste of Perfection</h2>
+                    <p>Explore our signature dishes crafted with authentic recipes and premium ingredients.</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2"/><path d="M6 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                        </div>
+                        <h3>Main Course</h3>
+                        <ul>
+                            <li>Paneer Butter Masala</li>
+                            <li>Dal Makhani</li>
+                            <li>Mixed Vegetable Curry</li>
+                            <li>Jeera Rice</li>
+                        </ul>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+                        </div>
+                        <h3>Breads</h3>
+                        <ul>
+                            <li>Butter Naan</li>
+                            <li>Roti</li>
+                            <li>Paratha</li>
+                            <li>Puri</li>
+                        </ul>
+                    </div>
+                    <div class="menu-card">
+                        <div class="menu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Desserts</h3>
+                        <ul>
+                            <li>Gulab Jamun</li>
+                            <li>Rasgulla</li>
+                            <li>Kheer</li>
+                            <li>Gajar Ka Halwa</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="menu-note">And many more custom options available upon request.</p>
+                <a href="#contact" class="menu-link">Request Full Menu <span class="arrow">→</span></a>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="contact section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <span class="eyebrow">Contact Us</span>
+                    <h2>Let's Plan Your Event</h2>
+                    <p>Ready to make your occasion unforgettable? Reach out to us for bookings, inquiries, or custom menu planning.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+91 XXXXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>info@shreedamodarcatering.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>123 Main Street<br>Your City, State XXXXXX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <h3>Send a Message</h3>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="cf-name">Your Name</label>
+                                <input type="text" id="cf-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="cf-phone">Phone Number</label>
+                                <input type="tel" id="cf-phone" placeholder="+91 98765 43210" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="cf-type">Event Type</label>
+                                <select id="cf-type" required>
+                                    <option value="Wedding / Pre-Wedding">Wedding / Pre-Wedding</option>
+                                    <option value="Corporate Event">Corporate Event</option>
+                                    <option value="Birthday / Milestone">Birthday / Milestone</option>
+                                    <option value="Festival / Puja">Festival / Puja</option>
+                                    <option value="House Warming">House Warming</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="cf-guests">Guest Count</label>
+                                <input type="number" id="cf-guests" placeholder="100" min="1">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" rows="4" placeholder="Tell us about your event requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- ============ FOOTER ============ -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Contact Info</h4>
-                <p>Email: info@shreedamodarcatering.com</p>
-                <p>Phone: +91 XXXXX XXXXX</p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="brand">Shree&nbsp;Damodar <span>Catering</span></a>
+                    <p>Bringing authentic flavors to your special occasions.</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
             </div>
-            <div class="footer-section">
-                <h4>Address</h4>
-                <p>123 Main Street</p>
-                <p>Your City, State XXXXXX</p>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Shree Damodar Catering. All rights reserved.</p>
+                <p>Designed with modern web standards.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Shree Damodar Catering. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- ============ LIGHTBOX MODAL ============ -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
