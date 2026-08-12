@@ -231,17 +231,43 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowRight') step(1);
     });
 
-    /* ============ CONTACT FORM ============ */
-    document.getElementById('contact-form').addEventListener('submit', e => {
-        e.preventDefault();
-        const name = document.getElementById('cf-name').value;
-        const phone = document.getElementById('cf-phone').value;
-        const type = document.getElementById('cf-type').value;
-        const guests = document.getElementById('cf-guests').value;
-        const message = document.getElementById('cf-message').value;
+    /* ============ CONTACT FORM (FormSubmit) ============ */
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('cf-submit');
+    const statusEl = document.getElementById('form-status');
 
-        const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEvent Type: ${type}%0D%0AGuest Count: ${guests}%0D%0A%0D%0A${encodeURIComponent(message)}`;
-        window.location.href = `mailto:info@shreedamodarcatering.com?subject=${encodeURIComponent('Catering Inquiry — ' + type)}&body=${body}`;
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        statusEl.className = 'form-status';
+        statusEl.textContent = '';
+
+        const data = Object.fromEntries(new FormData(form));
+        data._subject = 'New Catering Inquiry — ' + data.event_type;
+        data._template = 'table';
+        data._captcha = 'false';
+
+        console.log('Submitting form data:', data);
+
+        try {
+            const res = await fetch('https://formsubmit.co/ajax/damodarcateringinquiry@gmail.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            const json = await res.json();
+            if (!res.ok || json.success === 'false' || json.success === false) throw new Error(json.message);
+            statusEl.classList.add('success');
+            statusEl.textContent = 'Thank you! Your inquiry has been sent — we\'ll get back to you soon.';
+            form.reset();
+        } catch (err) {
+            statusEl.classList.add('error');
+            statusEl.textContent = 'Something went wrong. Please call or WhatsApp us directly.';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Inquiry';
+        }
     });
 
     /* ============ FOOTER YEAR ============ */

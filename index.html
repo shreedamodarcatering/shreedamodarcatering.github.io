@@ -234,16 +234,18 @@
                             </div>
                             <div>
                                 <h4>Call Us</h4>
-                                <p>+91 XXXXX XXXXX</p>
+                                <p><a href="tel:+919822143156">+91 98221 43156</a></p>
+                                <p><a href="tel:+917972099115">+91 79720 99115</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <div class="contact-icon whatsapp-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
                             </div>
                             <div>
-                                <h4>Email Us</h4>
-                                <p>info@shreedamodarcatering.com</p>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/919822143156?text=Hi!%20I%27d%20like%20to%20enquire%20about%20catering." target="_blank" rel="noopener">Chat on +91 98221 43156</a></p>
+                                <p><a href="https://wa.me/917972099115?text=Hi!%20I%27d%20like%20to%20enquire%20about%20catering." target="_blank" rel="noopener">Chat on +91 79720 99115</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -252,28 +254,37 @@
                             </div>
                             <div>
                                 <h4>Visit Us</h4>
-                                <p>123 Main Street<br>Your City, State XXXXXX</p>
+                                <p>373/B, Shantinagar, Aquem Baixo<br>Navelim, Goa 403707</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="map-embed">
+                        <iframe
+                            src="https://maps.google.com/maps?q=shree damodar catering margao goa&output=embed"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Shree Damodar Catering location"></iframe>
                     </div>
                 </div>
                 <div class="contact-card">
                     <h3>Send a Message</h3>
-                    <form class="contact-form" id="contact-form">
+                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/damodarcatering@gmail.com" method="POST">
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="cf-name">Your Name</label>
-                                <input type="text" id="cf-name" placeholder="John Doe" required>
+                                <input type="text" id="cf-name" name="name" placeholder="John Doe" required>
                             </div>
                             <div class="form-field">
                                 <label for="cf-phone">Phone Number</label>
-                                <input type="tel" id="cf-phone" placeholder="+91 98765 43210" required>
+                                <input type="tel" id="cf-phone" name="phone" placeholder="+91 98765 43210" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="cf-type">Event Type</label>
-                                <select id="cf-type" required>
+                                <select id="cf-type" name="event_type" required>
                                     <option value="Wedding / Pre-Wedding">Wedding / Pre-Wedding</option>
                                     <option value="Corporate Event">Corporate Event</option>
                                     <option value="Birthday / Milestone">Birthday / Milestone</option>
@@ -284,14 +295,15 @@
                             </div>
                             <div class="form-field">
                                 <label for="cf-guests">Guest Count</label>
-                                <input type="number" id="cf-guests" placeholder="100" min="1">
+                                <input type="number" id="cf-guests" name="guests" placeholder="100" min="1">
                             </div>
                         </div>
                         <div class="form-field">
                             <label for="cf-message">Message</label>
-                            <textarea id="cf-message" rows="4" placeholder="Tell us about your event requirements..."></textarea>
+                            <textarea id="cf-message" name="message" rows="4" placeholder="Tell us about your event requirements..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Inquiry</button>
+                        <button type="submit" class="btn btn-primary btn-block" id="cf-submit">Send Inquiry</button>
+                        <p class="form-status" id="form-status" role="status"></p>
                     </form>
                 </div>
             </div>
