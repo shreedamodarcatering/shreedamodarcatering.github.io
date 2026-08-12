@@ -610,9 +610,183 @@ footer { background: var(--darker); padding: 56px 0 0; }
 
 body.no-scroll { overflow: hidden; }
 
+/* ============ MENU PAGE ============ */
+.page-hero {
+    background:
+        linear-gradient(rgba(15, 12, 10, 0.78), rgba(15, 12, 10, 0.78)),
+        url('images/gallery/display/2.jpg') center/cover no-repeat;
+    padding: 170px 0 90px;
+    text-align: center;
+}
+.page-hero h1 {
+    color: #fff;
+    font-size: clamp(2.1rem, 4.5vw, 3rem);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.page-hero p { color: rgba(255, 255, 255, 0.85); max-width: 560px; margin: 0 auto; }
+
+.menu-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 48px;
+    position: sticky;
+    top: 72px;
+    z-index: 50;
+    background: var(--white);
+    padding: 14px 0;
+    box-shadow: 0 10px 14px -12px rgba(28, 25, 23, 0.18);
+}
+
+.filter-pill.pill-light {
+    background: var(--cream);
+    border: 1px solid #e7e0d4;
+    color: var(--text);
+}
+.filter-pill.pill-light:hover { background: #ece7dd; color: var(--dark); }
+.filter-pill.pill-light.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.package-card {
+    background: #faf8f4;
+    border: 1px solid #efeae1;
+    border-radius: var(--radius);
+    padding: 26px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.package-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+
+.pkg-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e7e0d4;
+}
+.pkg-head h3 { font-size: 1.15rem; font-weight: 600; }
+
+/* Indian veg / non-veg mark */
+.food-mark {
+    width: 18px; height: 18px;
+    flex: 0 0 18px;
+    border: 1.5px solid;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.food-mark span { width: 8px; height: 8px; border-radius: 50%; }
+.food-mark.veg { border-color: #15803d; }
+.food-mark.veg span { background: #15803d; }
+.food-mark.nonveg { border-color: #b91c1c; }
+.food-mark.nonveg span { background: #b91c1c; }
+
+.package-card ul { list-style: none; flex: 1; }
+.package-card li {
+    position: relative;
+    padding: 4px 0 4px 24px;
+    font-size: 0.88rem;
+    color: var(--text);
+}
+.package-card li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 9px;
+    width: 12px; height: 12px;
+    border: 1.3px solid #15803d;
+    border-radius: 3px;
+    background: radial-gradient(circle, #15803d 2.6px, transparent 3.2px);
+}
+.package-card li.nv::before {
+    border-color: #b91c1c;
+    background: radial-gradient(circle, #b91c1c 2.6px, transparent 3.2px);
+}
+
+.pkg-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e7e0d4;
+}
+.pkg-price { font-size: 0.8rem; color: var(--text-light); font-style: italic; }
+.pkg-link { color: var(--accent); font-weight: 600; font-size: 0.85rem; text-decoration: none; }
+.pkg-link:hover { color: var(--accent-dark); }
+
+.menu-notes {
+    margin-top: 34px;
+    text-align: center;
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.88rem;
+}
+
+.alacarte-grid { columns: 3; column-gap: 24px; }
+.alacarte-card {
+    break-inside: avoid;
+    background: #faf8f4;
+    border: 1px solid #efeae1;
+    border-radius: var(--radius);
+    padding: 26px 24px;
+    margin-bottom: 24px;
+}
+.alacarte-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e7e0d4;
+}
+.alacarte-card ul { list-style: none; }
+.alacarte-card li {
+    position: relative;
+    padding: 4px 0 4px 24px;
+    font-size: 0.88rem;
+    color: var(--text);
+}
+.alacarte-card li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 9px;
+    width: 12px; height: 12px;
+    border: 1.3px solid #15803d;
+    border-radius: 3px;
+    background: radial-gradient(circle, #15803d 2.6px, transparent 3.2px);
+}
+.alacarte-card li.nv::before {
+    border-color: #b91c1c;
+    background: radial-gradient(circle, #b91c1c 2.6px, transparent 3.2px);
+}
+
+.menu-cta {
+    background: var(--dark);
+    text-align: center;
+    padding: 80px 0;
+}
+.menu-cta h2 { color: #fff; margin-bottom: 14px; }
+.menu-cta p { color: var(--text-on-dark); max-width: 520px; margin: 0 auto 32px; }
+
+.nav-menu a.nav-active { color: var(--accent) !important; }
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
     .service-grid { grid-template-columns: repeat(2, 1fr); }
+    .package-grid { grid-template-columns: repeat(2, 1fr); }
+    .alacarte-grid { columns: 2; }
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 56px; }
     .experience-badge { right: 14px; bottom: -22px; }
@@ -643,6 +817,9 @@ body.no-scroll { overflow: hidden; }
 
     .service-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .package-grid { grid-template-columns: 1fr; }
+    .alacarte-grid { columns: 1; }
+    .page-hero { padding: 140px 0 64px; }
     .menu-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .contact-card { padding: 28px 22px; }
