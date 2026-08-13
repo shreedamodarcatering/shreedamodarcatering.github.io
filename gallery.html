@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Shree Damodar Catering</title>
+    <meta name="description" content="Photos and videos of buffet setups, dishes and events catered by Shree Damodar Catering, Navelim, Goa.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand">Shree&nbsp;Damodar <span>Catering</span></a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="gallery.html" class="nav-active">Gallery</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li class="nav-cta-mobile"><a href="index.html#contact" class="btn btn-primary btn-sm">Book Now</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="btn btn-primary btn-sm nav-cta">Book Now</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ PAGE HERO ============ -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Our Gallery</span>
+                <h1>Moments We've Crafted</h1>
+                <p>A glimpse into the beautiful events and exquisite culinary experiences we've delivered.</p>
+            </div>
+        </section>
+
+        <!-- ============ GALLERY ============ -->
+        <section id="gallery" class="gallery section">
+            <div class="container">
+                <div class="gallery-filters" id="gallery-filters">
+                    <button class="filter-pill active" data-filter="all">All</button>
+                    <button class="filter-pill" data-filter="buffet">Buffet Setups</button>
+                    <button class="filter-pill" data-filter="veg">Veg Food</button>
+                    <button class="filter-pill" data-filter="nonveg">Non-Veg Food</button>
+                    <button class="filter-pill" data-filter="videos">Videos</button>
+                    <button class="filter-pill" data-filter="starters">Starters</button>
+                    <button class="filter-pill" data-filter="desserts">Desserts</button>
+                    <button class="filter-pill" data-filter="others">Others</button>
+                </div>
+                <div class="gallery-grid" id="gallery-grid"></div>
+                <div class="gallery-pagination" id="gallery-pagination"></div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="menu-cta">
+            <div class="container">
+                <h2>Like what you see?</h2>
+                <p>Let us bring the same care and flavor to your next celebration.</p>
+                <div class="hero-actions">
+                    <a href="index.html#contact" class="btn btn-primary">Book Your Event <span class="arrow">→</span></a>
+                    <a href="menu.html" class="btn btn-ghost">Explore Menu</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">Shree&nbsp;Damodar <span>Catering</span></a>
+                    <p>Bringing authentic flavors to your special occasions.</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="https://www.instagram.com/shreedamodarcatering/" target="_blank" rel="noopener">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Shree Damodar Catering. All rights reserved.</p>
+                <p>Designed with modern web standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ LIGHTBOX MODAL ============ -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
